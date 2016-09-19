@@ -17,34 +17,40 @@
 
 #include <iostream>
 #include <vector>
-#include "lapacke.h"
+
+
+extern "C" void dgetrf_(int* dim1, int* dim2, double* a, \
+                         int* lda, int* ipiv, int* info);
+extern "C" void dgetrs_(char *TRANS, int *N, int *NRHS, double *A, \
+                        int *LDA, int *IPIV, double *B, int *LDB, int *INFO );
 
 using namespace std;
 
+#define N 3
 
 int main()
 {
     char trans = 'N';
-    int dim = 3;
+    int dim = N;
     int nrhs = 1;
-    int LDA = dim;
-    int LDB = dim;
+    int LDA = N;
+    int LDB = N;
     int info;
         
-    double A[LDA*LDB] = {
+    double A[N*N] = {
         8.79,  9.93,  9.83,
         6.11,  6.91,  5.04,
        -9.15, -7.93,  4.86
     };
     
-    double b[LDB*nrhs] = {
+    double b[N*nrhs] = {
         1.0,
         1.0,
         1.0
     };
     
 
-    int ipiv[6];
+    int ipiv[N];
 
     //solve Ax = b
     dgetrf_(&dim, &dim, A, &LDA, ipiv, &info);
