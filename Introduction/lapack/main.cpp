@@ -27,12 +27,13 @@ extern "C" void dgetrs_(char *TRANS, int *N, int *NRHS, double *A, \
 using namespace std;
 
 #define N 3
+#define NRHS 1
 
 int main()
 {
     char trans = 'N';
     int dim = N;
-    int nrhs = 1;
+    int nrhs = NRHS;
     int LDA = N;
     int LDB = N;
     int info;
@@ -43,7 +44,7 @@ int main()
        -9.15, -7.93,  4.86
     };
     
-    double b[N*nrhs] = {
+    double b[N*NRHS] = {
         1.0,
         1.0,
         1.0
