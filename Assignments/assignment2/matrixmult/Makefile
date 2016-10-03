@@ -1,15 +1,7 @@
 .PHONY: benchmark clean tar
 
-HOSTNAME = $(shell hostname -s)
-
-ifeq ($(HOSTNAME),cub)
-        CC=gcc
-        GOTO=-L/share/apps/goto2/1.13/gcc_450 -lgoto2 -lgfortran
-else
-        CC=gcc
-        GOTO=-lblas
-endif
-
+CC=gcc
+GOTO=-lblas
 
 #
 # Compiler and compiler flags
