@@ -5,7 +5,8 @@
 #
 .PRECIOUS:	%.gp %.xxx %.out
 
-generic: generic.ps
+#generic: generic.ps
+generic: membench
 
 membench: membench.c
 	gcc -O3 -o membench membench.c
