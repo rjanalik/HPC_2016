@@ -14,7 +14,7 @@ clean:
 	make generic.clean
 
 %.ps: membench %.gp
-	./sbatch membench.sbatch membench.sh $*
+	./membench.sh $*
 
 %.gp: gnuplot.template
 	sed -e '/sarlacc/	s//$*/' gnuplot.template > $*.gp
