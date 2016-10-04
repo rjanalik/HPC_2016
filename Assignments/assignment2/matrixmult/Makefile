@@ -8,7 +8,7 @@ GOTO=-lblas
 #
 #CC = gcc
 #CC = icc
-#CFLAGS = -Wall -pedantic -O3 -std=gnu99 
+CFLAGS = -Wall -pedantic -O3 -std=gnu99 
 #CFLAGS = -Wall -O3 -std=gnu99
 #CFLAGS = -Wall -g -O0 -std=gnu99
 

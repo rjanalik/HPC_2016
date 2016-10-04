@@ -1,4 +1,4 @@
-set title "NxN matrix-matrix-multiplication on Quad-Core AMD Opteron(tm) Processor 2344@1.7GH"
+set title "NxN matrix-matrix-multiplication on 10-Core Intel(R) Xeon(R) CPU E5-2650 v3 @ 2.30GHz"
 set xlabel "Matrix size (N)"
 set ylabel "Performance (MFlop/s)"
 set grid
@@ -16,4 +16,4 @@ set output "timing.ps"
 
 plot "timing_basic_dgemm.data"   using 1:2 title "Naive dgemm" with linespoints, \
      "timing_blocked_dgemm.data" using 1:2 title "Student dgemm" with linespoints, \
-     "timing_blas_dgemm.data"   using 1:2 title "GOTO BLAS dgemm" with linespoints
+     "timing_blas_dgemm.data"   using 1:2 title "OpenBLAS dgemm" with linespoints

@@ -10,7 +10,7 @@ set nokey
 set xtics (4,16,64,256,"1K" 1024,"4K" 4096,"16K" 16384,"64K" 65536,"256K" 262144,"1M" 1048576)
 
     
-set title "Quad-Core AMD Opteron(tm) Processor 2344 HE@1.7GHz Read+Write (ns) Versus Stride"
+set title "10-Core Intel(R) Xeon(R) CPU E5-2650 v3 @ 2.30GHz Read+Write (ns) Versus Stride"
 set xlabel "Stride (bytes)"
 set ylabel "Time Read+Write (nanoseconds)"
 
