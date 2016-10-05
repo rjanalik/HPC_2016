@@ -1,7 +1,8 @@
 .PHONY: benchmark clean tar
 
 CC=gcc
-GOTO=-lblas
+#GOTO=-lblas
+GOTO=-Wl,--no-as-needed -L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -ldl -m64 -I${MKLROOT}/include
 
 #
 # Compiler and compiler flags
