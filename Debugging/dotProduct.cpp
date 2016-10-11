@@ -5,7 +5,7 @@
 #include <math.h>
 
 #define NMAX 100
-#define NMAX_RUN 1000000
+#define NMAX_ERR 1000000
 
 using namespace std;
 
@@ -26,7 +26,7 @@ int main()
 
    // Compute dot product
    long double dotProduct = 0;
-   for(int i=0; i< NMAX_RUN; i ++)
+   for(int i=0; i< NMAX_ERR; i ++)
    {
       dotProduct += a[i] * b[i];
    }
