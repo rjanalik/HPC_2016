@@ -8,7 +8,7 @@
 
 # load modules
 if command -v module 1>/dev/null 2>&1; then
-   module load gcc/6.1.0 openblas/0.2.18_gcc-6.1 gnuplot
+   module load gcc/6.1.0 openblas/0.2.18_gcc-6.1
 fi
 
-./basic_dgemm && ./blas_dgemm && ./blocked_dgemm && gnuplot timing.gp
+./basic_dgemm && ./blas_dgemm && ./blocked_dgemm
