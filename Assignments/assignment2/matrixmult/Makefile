@@ -6,7 +6,7 @@ ifeq ($(UNAME),Linux)
 	GOTO=-Wl,--no-as-needed -L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_gnu_thread -lpthread -lm -ldl -m64 -I${MKLROOT}/include
 else
 	ifeq ($(UNAME),Darwin)
-	GOTO=-Wl,-L${MKLROOT}/lib -Wl,-rpath,${MKLROOT}/lib -lmkl_intel_lp64 -lmkl_core -lmkl_gnu_thread -lpthread -lm -ldl -m64 -I${MKLROOT}/include
+	GOTO=-Wl,-L${MKLROOT}/lib -Wl,-rpath,${MKLROOT}/lib -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread -lm -ldl -m64 -I${MKLROOT}/include
 	else
 		GOTO=-lblas
 	endif
