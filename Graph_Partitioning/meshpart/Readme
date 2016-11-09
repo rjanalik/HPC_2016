@@ -1,0 +1,5 @@
+% Example:
+% mesh=Mesh
+% mesh.makePartitioningOf('PartitioningMeshes/747heat.1','747out',2) 
+
+
