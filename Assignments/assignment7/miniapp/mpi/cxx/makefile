@@ -1,5 +1,5 @@
-CXX=g++
-CXXFLAGS=-O3 -fopenmp
+CXX=mpicxx
+CXXFLAGS=-O3 -fopenmp  -fpermissive
 
 ifeq ($(PE_ENV),GNU)
     # the gnu compiler requires that we specifically enable OpenMP
