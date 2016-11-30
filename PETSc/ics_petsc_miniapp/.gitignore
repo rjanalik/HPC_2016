@@ -1,0 +1,4 @@
+*.o
+out.m
+slurm*.out
+main
